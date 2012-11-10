@@ -41,7 +41,10 @@ add_executable(amqp_listenq amqp_listenq.c ${COMMON_SRCS})
 target_link_libraries(amqp_listenq ${RMQ_LIBRARY_TARGET})
 
 add_executable(amqp_connect amqp_connect.c)
-target_link_libraries(amqp_connect, ${RMQ_LIBRARY_TARGET})
+target_link_libraries(amqp_connect ${RMQ_LIBRARY_TARGET})
+
+add_executable(amqp_connect_uri amqp_connect_uri.c)
+target_link_libraries(amqp_connect_uri ${RMQ_LIBRARY_TARGET})
 
 if (ENABLE_SSL_SUPPORT)
 add_executable(amqps_sendstring amqps_sendstring.c ${COMMON_SRCS})
