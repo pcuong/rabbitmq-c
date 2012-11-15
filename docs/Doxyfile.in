@@ -97,18 +97,20 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = @CMAKE_SOURCE_DIR@/librabbitmq \
-                         @CMAKE_BINARY_DIR@/librabbitmq
+INPUT                  = @CMAKE_CURRENT_SOURCE_DIR@/librabbitmq \
+                         @CMAKE_CURRENT_SOURCE_DIR@/docs \
+                         @CMAKE_CURRENT_BINARY_DIR@/librabbitmq
 INPUT_ENCODING         = UTF-8
-FILE_PATTERNS          = *.h
+FILE_PATTERNS          = *.h *.md
 RECURSIVE              = NO
 EXCLUDE                =
 EXCLUDE_SYMLINKS       = NO
 EXCLUDE_PATTERNS       = amqp_private.h \
                          config.h
 EXCLUDE_SYMBOLS        =
-EXAMPLE_PATH           =
-EXAMPLE_PATTERNS       =
+EXAMPLE_PATH           = @CMAKE_CURRENT_SOURCE_DIR@ \
+                         @CMAKE_CURRENT_SOURCE_DIR@/examples
+EXAMPLE_PATTERNS       = *.c *.md
 EXAMPLE_RECURSIVE      = NO
 IMAGE_PATH             =
 INPUT_FILTER           =
